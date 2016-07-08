@@ -1,0 +1,19 @@
+<project default="jar" name="ubuntu_git_ant_test">
+<target name="clean">
+ <delete dir="classes"/>
+ <delete dir="target"/>
+ <echo>Cleaning process</echo>
+</target>
+<target name="compile">
+ <mkdir dir="classes"/>
+ <mkdir dir="target"/>
+ <javac includeantruntime="false" srcdir="src" destdir="classes"/>
+ <echo>Compiling the modules</echo>
+</target>
+<target name="jar" depends="compile">
+ <jar destfile="target/antbuild.jar" includes="**/*.class" basedir="classes">
+  <manifest> <attribute name="Main-class" value="antbuild.linuxdemo"/> </manifest>
+ </jar> 
+ <echo>Creating jar for the project</echo>
+</target>
+</project>
