@@ -6,5 +6,6 @@ public class linuxdemo
 	System.out.println("New linux module");
 	System.out.println("Second Comment");
 	System.out.println("brach test change");
+	System.out.println("after one merge happened");
 }
 }
